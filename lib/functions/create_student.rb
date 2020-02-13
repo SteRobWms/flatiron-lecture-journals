@@ -5,7 +5,8 @@ def create_student
     last_name = $prompt.ask("What is your last name?")
     puts "Hi #{first_name} #{last_name}"
     temp_stud = Student.where(first_name: first_name, last_name: last_name)
-    if temp_stud
+    binding.pry
+    if temp_stud.count > 0
         puts "You may have an account already"
         if $prompt.select("Are any of these your username? Select 'false' if not.", temp_stud.map{|stud| stud.username}.push(false))
             return puts "Welcome back! Please go back and select 'Login'"

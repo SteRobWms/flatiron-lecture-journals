@@ -20,7 +20,13 @@ def display_journal_entry(id)
     puts "General feelings:         #{$current_journal.feelings_general}"
     puts "----------------------------------------------------"
     puts "Mood (1-worst, 5-best):   #{rating_stars($current_journal.mood)}"
+    puts "===================================================="
+    $prompt.select("What would you like to do next?") do |menu|
+        menu.choice "Edit", -> {choose_edit}
+        menu.choice "View Journal Entries", -> {student_journal_list}
+    end
 end
 # display_journal_entry
 # binding.pry
 0
+# display_journal_entry(1)

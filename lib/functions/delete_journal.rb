@@ -2,7 +2,7 @@
 
 def delete_journal(id)
     if $prompt.yes?("Are you sure you want to DELETE this journal?")
-        JournalEntry.destroy_by(id: id)
+        JournalEntry.destroy(id)
         puts "...into the void"
         sleep(3)
         student_journal_list

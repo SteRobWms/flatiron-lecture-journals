@@ -23,8 +23,9 @@ def display_journal_entry(id)
     puts "===================================================="
     $prompt.select("What would you like to do next?") do |menu|
         menu.choice "Edit", -> {choose_edit}
-        menu.choice "View Journal Entries", -> {student_journal_list}
         menu.choice "Delete Entry", -> {delete_journal($current_journal.id)}
+        menu.choice "View Journal Entries", -> {student_journal_list}
+        menu.choice "Back to Lecture List", -> {lecture_list_select}
     end
 end
 # display_journal_entry

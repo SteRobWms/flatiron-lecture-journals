@@ -39,6 +39,7 @@ def lecture_list_select
         puts ".."
         sleep(1)
         puts "..."
+        sleep(1)
         $current_journal_id = journal_check.id
         display_journal_entry($current_journal_id)
     else

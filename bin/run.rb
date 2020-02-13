@@ -16,7 +16,7 @@ main_menu
 #     main_menu
 # end    
 
-puts $current_student_id
+# puts $current_student_id
 
 def inner_menu
     $prompt.select("What would you like to do?") do |menu|

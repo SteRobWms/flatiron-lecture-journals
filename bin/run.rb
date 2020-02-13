@@ -7,6 +7,7 @@ def main_menu
     $prompt.select("Select an option below") do |menu|
     menu.choice "Log in", -> {login}
     menu.choice "Create new student account", -> {create_student}
+    menu.choice "Exit Program"
     # menu.choice "Hang out for a bit", -> {hang_out(0.5,5)}
     end
 end

@@ -32,6 +32,7 @@ def student_journal_list
     # end
 
     $current_journal_id = selected_journal
+    display_journal_entry($current_journal_id)
     # binding.pry
 
     # display_journal_entry($current_journal_id)

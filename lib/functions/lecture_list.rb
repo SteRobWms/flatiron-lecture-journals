@@ -27,10 +27,11 @@ def lecture_list_select
     puts "Opening #{lecture_hash.key(selected_lecture)}"
     $current_lecture_id = selected_lecture
 
-    if $current_student.journal_entries == nil || 0
-        create_entry
-    else
-        journal_check = $current_student.journal_entries.find_by(lecture_id: $current_lecture_id)
+    # if $current_student.journal_entries == nil || 0
+    #     create_entry
+    # else
+    journal_check = $current_student.journal_entries.find_by(lecture_id: $current_lecture_id)
+    # end
     
     # binding.pry
 

@@ -3,6 +3,7 @@ require_relative 'global'
 # require_relative 'journal_entry'
 
 def student_journal_list
+    
     # $current_student_id = 1
     # $current_student = Student.find($current_student_id)
 
@@ -10,6 +11,11 @@ def student_journal_list
 
     # def make_journal_hash
         journal_hash = {}
+        $current_student = Student.find($current_student_id)
+        if $current_student.journal_entries.count == 0
+            puts "Sorry, no entires have been created"
+            lecture_list_select
+        else
         puts "Current Student: #{$current_student}"
         puts "Current Student Journals: #{$current_student.journal_entries}"
         
@@ -17,6 +23,7 @@ def student_journal_list
             journal_hash["Lecture: #{entry.lecture.name} | Date Created: #{entry.created_at} | What I Learned: #{entry.what_did_i_learn[0..13]}..."] = entry.id
         end
         journal_hash
+    
     # end
 
     # make_journal_hash
@@ -36,8 +43,9 @@ def student_journal_list
     # binding.pry
 
     # display_journal_entry($current_journal_id)
-
+    end
 end
+
 # binding.pry
 0
 # student_journal_list

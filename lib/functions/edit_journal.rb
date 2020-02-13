@@ -16,31 +16,37 @@ end
 def what_did_i_learn_1
     $current_journal.what_did_i_learn = $prompt.ask("What did you learn?")
     $current_journal.save
+    display_journal_entry($current_journal_id)
 end
 
 def what_was_unclear_1
     $current_journal.what_was_unclear = $prompt.ask("What was not clear?")
     $current_journal.save
+    display_journal_entry($current_journal_id)
 end
 
 def confidence_level_1
     $current_journal.confidence_level = $prompt.select("How confident are you in the material?", [1, 2, 3, 4, 5])
     $current_journal.save
+    display_journal_entry($current_journal_id)
 end
 
 def feelings_on_topic_1
     $current_journal.feelings_on_topic = $prompt.ask("How did you feel on the topic discussed?")
     $current_journal.save
+    display_journal_entry($current_journal_id)
 end
 
 def feelings_general_1
     $current_journal.feelings_general = $prompt.ask("How do you personally feel today?")
         $current_journal.save
+        display_journal_entry($current_journal_id)
 end
 
 def mood_1
     $current_journal.mood = $prompt.select("What is your mood", [1, 2, 3, 4, 5])
-    $current_journal.save
+    $current_journal.save 
+    display_journal_entry($current_journal_id)
 end
 
 # journal_entry($current_journal_id)

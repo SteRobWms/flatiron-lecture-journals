@@ -37,6 +37,7 @@ def create_student
     Student.create(username: username, password: password, first_name: first_name, last_name: last_name, age: age, gender: gender)
 
     $current_student_id = Student.last.id
+    inner_menu
     # puts $current_student_id
 end
 # create_student

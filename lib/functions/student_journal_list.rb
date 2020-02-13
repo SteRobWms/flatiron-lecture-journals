@@ -13,7 +13,7 @@ def student_journal_list
         journal_hash = {}
         $current_student = Student.find($current_student_id)
         if $current_student.journal_entries.count == 0
-            puts "Sorry, no entires have been created"
+            puts "Sorry, no entries have been created"
             lecture_list_select
         else
         puts "Current Student: #{$current_student}"

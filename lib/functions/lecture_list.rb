@@ -34,19 +34,19 @@ def lecture_list_select
     
     # binding.pry
 
-        if journal_check != nil
-            puts "A current journal entry is already created for this lecture. Going there now..."
-            sleep(1)
-            puts "."
-            sleep(1)
-            puts ".."
-            sleep(1)
-            puts "..."
-            $current_journal_id = journal_check.id
-            display_journal_entry($current_journal_id)
-        else
-            create_entry
-        end
+    if journal_check != nil
+        puts "A current journal entry is already created for this lecture. Going there now..."
+        sleep(1)
+        puts "."
+        sleep(1)
+        puts ".."
+        sleep(1)
+        puts "..."
+        sleep(1)
+        $current_journal_id = journal_check.id
+        display_journal_entry($current_journal_id)
+    else
+        create_entry
     end
 end
 # lecture_list_select

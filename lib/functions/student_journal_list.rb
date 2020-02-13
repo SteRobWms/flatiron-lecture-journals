@@ -5,7 +5,7 @@ require_relative 'global'
 def student_journal_list
     
     # $current_student_id = 1
-    # $current_student = Student.find($current_student_id)
+    $current_student = Student.find($current_student_id)
 
     # binding.pry
 

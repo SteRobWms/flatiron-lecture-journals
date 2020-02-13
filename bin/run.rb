@@ -14,19 +14,19 @@ end
 main_menu
 # if main_menu == false
 #     main_menu
-# end    
+# end
 
 # puts $current_student_id
 
-def inner_menu
-    $prompt.select("What would you like to do?") do |menu|
-        menu.choice "Look at my journal entries", -> {student_journal_list}
-        menu.choice "Create a new journal entry", -> {lecture_list_select}
-        menu.choice "Log out", -> {main_menu}
-    end
-end
+# def inner_menu
+#     $prompt.select("What would you like to do?") do |menu|
+#         menu.choice "Look at my journal entries", -> {student_journal_list}
+#         menu.choice "Create a new journal entry", -> {lecture_list_select}
+#         menu.choice "Log out", -> {main_menu}
+#     end
+# end
 
-inner_menu
+# inner_menu
 
 # if inner_menu == false
 #     main_menu

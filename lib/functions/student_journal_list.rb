@@ -39,4 +39,4 @@ def student_journal_list
 end
 # binding.pry
 0
-student_journal_list
+# student_journal_list

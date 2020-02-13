@@ -42,6 +42,8 @@ def mood_1
     $current_journal.mood = $prompt.select("What is your mood", [1, 2, 3, 4, 5])
     $current_journal.save
 end
+
+# journal_entry($current_journal_id)
 # choose_edit
 # binding.pry
 

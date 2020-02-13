@@ -6,16 +6,16 @@ def student_journal_list
 
     # binding.pry
 
-    def journal_hash
+    # def journal_hash
         journal_hash = {}
         $current_student.journal_entries.each do |entry|
             journal_hash["Lecture: #{entry.lecture.name} | Date Created: #{entry.created_at} | What I Learned: #{entry.what_did_i_learn[0..13]}..."] = entry.id
         end
         journal_hash
-    end
+    # end
 
     # p make_journal_hash
-    # binding.pry
+    binding.pry
 
     selected_journal = $prompt.select("What Journal do you want to view/modify?", journal_hash)
 
@@ -33,4 +33,4 @@ def student_journal_list
 end
 # binding.pry
 0
-# student_journal_list
+student_journal_list

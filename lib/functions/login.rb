@@ -4,14 +4,18 @@ require_relative 'global'
 
 def login
     # system("clear")
-    temp_username = $prompt.ask('What is your username?', required: true)
+    temp_username = $prompt.ask('What is your username?', required: true) do |q|
+        q.validate /^[A-Za-z0-9]*$/
+      end
     if !Student.find_by(username: temp_username)
         puts "Sorry, username #{temp_username} is not yet created. Please try again or create new user"
-        sleep(1.5)
+        sleep(1)
         main_menu
     else
         puts "Welcome back, #{temp_username}!"
-        temp_password = $prompt.mask("What is your password?", required: true)
+        temp_password = $prompt.mask("What is your password?", required: true) do |q|
+            q.validate /^[A-Za-z0-9]*$/
+        end
         if Student.find_by(username: temp_username).password == temp_password
             $current_student_id = Student.find_by(username: temp_username).id
             $current_student = Student.find($current_student_id)
@@ -26,6 +30,7 @@ def login
 end
 
 def inner_menu
+    $current_student = Student.find($current_student_id)
     system("clear")
     puts "Gaal-Williams Code Camp"
     puts "-"*100

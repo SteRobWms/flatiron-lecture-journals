@@ -5,7 +5,7 @@ require_relative 'global'
 def student_journal_list
     $current_student = Student.find($current_student_id)
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
     puts "Session for user:  #{$current_student.username}"
     puts "="*100

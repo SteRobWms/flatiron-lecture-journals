@@ -27,7 +27,7 @@ end
 
 def inner_menu
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
     puts "Session for user:  #{$current_student.username}"
     puts "="*100
@@ -35,7 +35,7 @@ def inner_menu
     $prompt.select("What would you like to do?") do |menu|
         menu.choice "Look at my journal entries", -> {student_journal_list}
         menu.choice "Create a new journal entry", -> {lecture_list_select}
-        menu.choice "Display journal summaries", -> {journal_insights}
+        # menu.choice "Display journal summaries", -> {journal_insights}
         menu.choice "Log out", -> {main_menu}
     end
 end

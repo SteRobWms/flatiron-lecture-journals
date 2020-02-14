@@ -6,9 +6,9 @@ require_relative 'global'
 #date_created = 
 def create_entry
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
-    puts "Session for user:  #{$current_student.username}"
+    puts "Session for user: #{$current_student.username}"
     puts "="*100
     sleep(0.5)
     puts "Creating Journal for Lecture: #{Lecture.find($current_lecture_id).name}"

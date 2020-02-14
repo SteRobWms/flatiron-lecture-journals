@@ -1,7 +1,7 @@
 require_relative 'global'
 def display_journal_entry(id)
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
     puts "Session for user:  #{$current_student.username}"
     puts "="*100

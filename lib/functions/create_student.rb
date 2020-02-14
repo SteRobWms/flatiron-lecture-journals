@@ -2,7 +2,7 @@ require_relative 'global'
 require 'pry'
 def create_student
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
     sleep(0.5)
     first_name = $prompt.ask("What is your first name?", required: true)

@@ -5,7 +5,7 @@ require_relative 'global'
 # lecture_list = Lecture.all.map{|lecture| "#{lecture.name} - #{lecture.date}"}
 def lecture_list_select
     system("clear")
-    puts "Gaal_Williams Code Camp"
+    puts "Gaal-Williams Code Camp"
     puts "-"*100
     puts "Session for user:  #{$current_student.username}"
     puts "="*100

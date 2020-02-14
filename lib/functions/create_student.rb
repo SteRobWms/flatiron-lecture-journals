@@ -41,3 +41,4 @@ def create_student
     # puts $current_student_id
 end
 # create_student
+puts "\e[H\e[2J"

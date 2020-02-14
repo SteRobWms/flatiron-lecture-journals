@@ -3,6 +3,8 @@ require_relative 'global'
 # require_relative 'journal_entry'
 
 def student_journal_list
+
+    puts "\e[H\e[2J"
     
     # $current_student_id = 1
     $current_student = Student.find($current_student_id)

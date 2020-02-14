@@ -18,7 +18,8 @@ def create_student
             puts "Okay, let's finish creating your account."
         end
     end
-    age = $prompt.ask("How old are you?", required: true)
+    # age = $prompt.ask("How old are you?", required: true)
+    age = $prompt.slider('How old are you?', max: 100, step: 1, default: 25)
     gender = $prompt.select("What is your gender?", ["Male", "Female"], required: true)
     def username_is_unique(username)
         if Student.find_by(username: username)

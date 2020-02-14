@@ -1,8 +1,12 @@
 require_relative 'global'
 require 'pry'
 def create_student
-    first_name = $prompt.ask("What is your first name?")
-    last_name = $prompt.ask("What is your last name?")
+    system("clear")
+    puts "Gaal_Williams Code Camp"
+    puts "-"*100
+    sleep(0.5)
+    first_name = $prompt.ask("What is your first name?", required: true)
+    last_name = $prompt.ask("What is your last name?", required: true)
     puts "Hi #{first_name} #{last_name}"
     temp_stud = Student.where(first_name: first_name, last_name: last_name)
     # binding.pry
@@ -14,22 +18,24 @@ def create_student
             puts "Okay, let's finish creating your account."
         end
     end
-    age = $prompt.ask("How old are you?")
-    gender = $prompt.select("What is your gender?", ["Male", "Female"])
+    age = $prompt.ask("How old are you?", required: true)
+    gender = $prompt.select("What is your gender?", ["Male", "Female"], required: true)
     def username_is_unique(username)
         if Student.find_by(username: username)
             puts "Sorry, username '#{username}' is already taken, please try another."
+            sleep(0.5)
             return false
         else
             puts "Username success"
+            sleep(0.5)
             return true
         end
     end
-    username = $prompt.ask("Please select a username")
+    username = $prompt.ask("Please select a username", required: true)
     until username_is_unique(username)
-        username = $prompt.ask("Please select another username")
+        username = $prompt.ask("Please select another username", required: true)
     end
-    password = $prompt.mask("Create a password")
+    password = $prompt.mask("Create a password", required: true)
     puts "Your password is #{password}"
 
     # cohort_id = $prompt.ask("Select your cohort")

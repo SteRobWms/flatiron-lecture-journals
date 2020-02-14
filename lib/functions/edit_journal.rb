@@ -3,6 +3,8 @@ require_relative 'global'
 # $current_journal_id = 4
 
 def choose_edit
+    puts "="*100
+    puts "-"*100
     $prompt.select("What do you want to edit?") do |menu|
         menu.choice 'What did you learn?', -> {what_did_i_learn_1}
         menu.choice 'What was not clear?', -> {what_was_unclear_1}

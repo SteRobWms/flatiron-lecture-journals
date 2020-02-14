@@ -2,12 +2,19 @@ require_relative '../config/environment'
 # require_relative '../lib/functions/login.rb'
 # require_relative '../lib/functions/global_id_test.rb'
 
-puts "Welcome to Gaal_Williams Code Camp!"
+# puts "Welcome to Gaal-Williams Code Camp!"
+# sleep(1)
+# puts "="*100
+# sleep()
 def main_menu
+    system("clear")
+    puts "Welcome to Gaal-Williams Code Camp!"
+    puts "-"*100
+    sleep(1)
     $prompt.select("Select an option below") do |menu|
-    menu.choice "Log in", -> {login}
-    menu.choice "Create new student account", -> {create_student}
-    menu.choice "Exit Program"
+    menu.choice "Log In", -> {login}
+    menu.choice "New Account", -> {create_student}
+    menu.choice "Exit Program", -> {exit}
     # menu.choice "Hang out for a bit", -> {hang_out(0.5,5)}
     end
 end
